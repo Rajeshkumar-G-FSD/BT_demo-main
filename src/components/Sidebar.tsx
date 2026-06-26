@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Info, Image, Briefcase, Bell, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Home, Info, Image, Briefcase, Phone, UserCog, Facebook, Instagram, Youtube } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface SidebarProps {
@@ -7,7 +7,6 @@ interface SidebarProps {
   setActiveTab: (tab: string) => void;
   isDarkMode: boolean;
   setIsDarkMode: (dark: boolean) => void;
-  notificationCount: number;
 }
 
 export default function Sidebar({
@@ -15,7 +14,6 @@ export default function Sidebar({
   setActiveTab,
   isDarkMode,
   setIsDarkMode,
-  notificationCount
 }: SidebarProps) {
   return (
     <div className="w-full h-full md:absolute md:left-0 md:top-0 md:bottom-0 md:w-16 z-20 flex flex-row md:flex-col justify-between items-center px-4 md:px-0 py-2 md:py-6 select-none bg-neutral-900/60 md:bg-transparent border border-white/5 md:border-none backdrop-blur-md md:backdrop-blur-none rounded-3xl md:rounded-none shadow-xl md:shadow-none overflow-x-auto md:overflow-x-visible md:overflow-y-visible flex-nowrap gap-4 md:gap-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
@@ -89,34 +87,32 @@ export default function Sidebar({
             ? 'bg-neutral-950/65 md:bg-neutral-900 border-neutral-800/80 text-white' 
             : 'bg-white/85 md:bg-white border-stone-200/60 text-neutral-800'
         }`}>
-          {/* Avatar */}
-          <div className="relative group w-7 h-7 md:w-9 md:h-9 rounded-full overflow-hidden border border-stone-200/50 cursor-pointer hover:scale-105 transition-all duration-300">
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80"
-              alt="User avatar"
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-
-          {/* Bell Icon */}
+          {/* Admin Icon */}
           <button
-            onClick={() => setActiveTab('notifications')}
-            className={`w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer relative ${
-              activeTab === 'notifications'
+            onClick={() => setActiveTab('admin')}
+            className={`w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${
+              activeTab === 'admin'
                 ? 'text-primary'
                 : 'text-neutral-400 hover:text-neutral-800 dark:hover:text-white'
             }`}
-            aria-label="Notifications"
-            id="sidebar-btn-notifications"
+            aria-label="Admin"
+            id="sidebar-btn-admin"
           >
-            <Bell className="w-4 h-4 md:w-4.5 md:h-4.5 stroke-[2]" />
-            {notificationCount > 0 && (
-              <span className="absolute top-1 right-1 flex h-1.5 w-1.5 md:h-2 md:w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 md:h-2 md:w-2 bg-primary"></span>
-              </span>
-            )}
+            <UserCog className="w-4 h-4 md:w-4.5 md:h-4.5 stroke-[2]" />
+          </button>
+
+          {/* Contact Icon */}
+          <button
+            onClick={() => setActiveTab('contact')}
+            className={`w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${
+              activeTab === 'contact'
+                ? 'text-primary'
+                : 'text-neutral-400 hover:text-neutral-800 dark:hover:text-white'
+            }`}
+            aria-label="Contact"
+            id="sidebar-btn-contact"
+          >
+            <Phone className="w-4 h-4 md:w-4.5 md:h-4.5 stroke-[2]" />
           </button>
         </div>
       </div>

@@ -174,7 +174,7 @@ export default function App() {
             }}
             isDarkMode={isDarkMode} 
             setIsDarkMode={setIsDarkMode}
-            notificationCount={notificationCount}
+
           />
         </div>
 
