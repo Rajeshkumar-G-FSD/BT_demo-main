@@ -29,9 +29,9 @@ export const PROPERTIES: Property[] = [
   },
   {
     id: 'solaria-dome',
-    name: 'Solaria Dome Haven',
+    name: 'Browntree Coonoor Homestay',
     location: 'COONOOR',
-    address: '442 Sunrise Crest, Malibu',
+    address: '12 Tea Garden Lane, Coonoor',
     price: 520000,
     rentPrice: 3800,
     type: 'HomeStays',
@@ -39,20 +39,20 @@ export const PROPERTIES: Property[] = [
     yard: 80,
     bedrooms: 2,
     baths: 2,
-    mainImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+    mainImage: imgOotyHotels,
     gallery: [
-      { name: 'Main Front', url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80' },
-      { name: 'Atrium Dining', url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80' },
-      { name: 'Wellness Spa', url: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80' }
+      { name: 'Garden View', url: imgOotyHotels },
+      { name: 'Ooty Resort', url: imgOotyHotel },
+      { name: 'Kothagiri Wing', url: imgKothagiri }
     ],
-    description: 'A masterpiece of curved geodesic architecture. Solaria Dome features smart thermal glass, an integrated biodome garden, and expansive ocean views over the Malibu coastline.',
+    description: 'A charming homestay nestled amidst Coonoor\'s rolling tea gardens. Enjoy the cool misty mornings, colonial-era architecture and warm hospitality of the Nilgiris.',
     rating: 4.85
   },
   {
     id: 'nebula-glass',
-    name: 'Nebula Glass Penthouse',
+    name: 'Browntree Kothakiri Heritage',
     location: 'KOTHAKIRI',
-    address: '88 Clifftop Way, Zion Valley',
+    address: '88 Nilgiri Crest, Kothakiri',
     price: 850000,
     rentPrice: 5900,
     type: 'Heritage Stays',
@@ -60,20 +60,20 @@ export const PROPERTIES: Property[] = [
     yard: 150,
     bedrooms: 4,
     baths: 4,
-    mainImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+    mainImage: imgKothagiri,
     gallery: [
-      { name: 'Clifftop Overlook', url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80' },
-      { name: 'Kitchen Horizon', url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80' },
-      { name: 'Skydeck Lounge', url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80' }
+      { name: 'Heritage Bungalow', url: imgKothagiri },
+      { name: 'Kodaikanal View', url: imgKodaikanal },
+      { name: 'Ooty Resort', url: imgOotyHotel }
     ],
-    description: 'Suspended dramatically over the red rock canyon cliffs, Nebula Glass features cantilevering structural glass floors, private heli-pad access, and automated climate control systems.',
+    description: 'A beautifully restored heritage bungalow in the serene village of Kothakiri. Experience colonial charm, lush shola forests and breathtaking Nilgiri panoramas.',
     rating: 4.98
   },
   {
     id: 'canyon-echo',
-    name: 'Canyon Echo Residence',
+    name: 'Browntree Kodaikanal Retreat',
     location: 'KODAIKANAL',
-    address: '712 Red Slate Ravine, Aspen',
+    address: '712 Lake Road, Kodaikanal',
     price: 430000,
     rentPrice: 3100,
     type: 'Service Apartments',
@@ -81,13 +81,13 @@ export const PROPERTIES: Property[] = [
     yard: 200,
     bedrooms: 3,
     baths: 3,
-    mainImage: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+    mainImage: imgKodaikanal,
     gallery: [
-      { name: 'Exterior Pine', url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80' },
-      { name: 'Stone Fireplace', url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80' },
-      { name: 'Observatory Room', url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80' }
+      { name: 'Kodaikanal Estate', url: imgKodaikanal },
+      { name: 'Kothagiri Stay', url: imgKothagiri },
+      { name: 'Ooty Grounds', url: imgOotyHotels }
     ],
-    description: 'Constructed from natural cedar and thermal slate, Canyon Echo hugs the Aspen valley contours. Complete with an outdoor natural-filtration rock pool, high-ceiling pine beams, and custom glass walls.',
+    description: 'Perched above the silver cascade valleys of Kodaikanal, this fully-serviced apartment blends modern comfort with the timeless beauty of the Princess of Hill Stations.',
     rating: 4.78
   }
 ];
