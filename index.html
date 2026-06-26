@@ -3,11 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+
+    <!-- ═══════════════════════════════════════════════
+         PRIMARY SEO
+    ════════════════════════════════════════════════ -->
+    <title>Brown Tree | Resorts, Homestays & Heritage Stays in Ooty, Coonoor & Kodaikanal</title>
+    <meta name="description" content="Experience luxury stays in the Nilgiris with Brown Tree — premium resorts, cozy homestays, heritage bungalows and service apartments across Ooty, Coonoor, Kothakiri and Kodaikanal. Book your hill station escape today." />
+    <meta name="keywords" content="Brown Tree resort, Ooty resort, Coonoor homestay, Kothakiri stay, Kodaikanal heritage stay, Nilgiris luxury stay, hill station resort Tamil Nadu, service apartments Ooty, boutique homestay Coonoor, heritage bungalow Kodaikanal" />
+    <meta name="author" content="Brown Tree Hospitality" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.browntreestays.com/" />
+
+    <!-- ═══════════════════════════════════════════════
+         OPEN GRAPH (Facebook / LinkedIn / WhatsApp)
+    ════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Brown Tree" />
+    <meta property="og:title" content="Brown Tree | Luxury Resorts & Homestays in the Nilgiris" />
+    <meta property="og:description" content="Discover extraordinary stays in Ooty, Coonoor, Kothakiri and Kodaikanal. Brown Tree offers resorts, homestays, heritage stays and service apartments amidst the misty Nilgiri hills." />
+    <meta property="og:url" content="https://www.browntreestays.com/" />
+    <meta property="og:image" content="https://www.browntreestays.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Brown Tree Resort — Nilgiris Hill Station Stay" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- ═══════════════════════════════════════════════
+         TWITTER CARD
+    ════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Brown Tree | Luxury Resorts & Homestays in the Nilgiris" />
+    <meta name="twitter:description" content="Premium resorts, cozy homestays, heritage bungalows & service apartments across Ooty, Coonoor, Kothakiri and Kodaikanal." />
+    <meta name="twitter:image" content="https://www.browntreestays.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Brown Tree Resort — Nilgiris Hill Station Stay" />
+
+    <!-- ═══════════════════════════════════════════════
+         GEO / LOCATION
+    ════════════════════════════════════════════════ -->
+    <meta name="geo.region" content="IN-TN" />
+    <meta name="geo.placename" content="Ooty, Nilgiris, Tamil Nadu, India" />
+    <meta name="geo.position" content="11.4102;76.6950" />
+    <meta name="ICBM" content="11.4102, 76.6950" />
+
+    <!-- ═══════════════════════════════════════════════
+         THEME / APPEARANCE
+    ════════════════════════════════════════════════ -->
+    <meta name="theme-color" content="#b45309" />
+    <meta name="msapplication-TileColor" content="#b45309" />
+
+    <!-- ═══════════════════════════════════════════════
+         FAVICON
+    ════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" href="/src/assets/images/browntree_transparent_logo.png" />
+    <link rel="apple-touch-icon" href="/src/assets/images/browntree_transparent_logo.png" />
+
+    <!-- ═══════════════════════════════════════════════
+         STRUCTURED DATA — LodgingBusiness (JSON-LD)
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.browntreestays.com/#organization",
+          "name": "Brown Tree Hospitality",
+          "url": "https://www.browntreestays.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.browntreestays.com/logo.png"
+          },
+          "sameAs": [
+            "https://www.facebook.com/browntreestays",
+            "https://www.instagram.com/browntreestays",
+            "https://www.youtube.com/@browntreestays"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Reservations",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Tamil"]
+          }
+        },
+        {
+          "@type": "LodgingBusiness",
+          "@id": "https://www.browntreestays.com/#lodging-ooty",
+          "name": "Browntree Ooty Resort",
+          "description": "A luxury resort nestled in the Nilgiri hills of Ooty offering premium rooms, panoramic views, and world-class hospitality.",
+          "url": "https://www.browntreestays.com/",
+          "image": "https://www.browntreestays.com/og-image.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ooty",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "11.4102",
+            "longitude": "76.6950"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Restaurant", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Room Service", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Mountain View", "value": true }
+          ],
+          "priceRange": "₹₹₹",
+          "starRating": { "@type": "Rating", "ratingValue": "4" },
+          "containedInPlace": {
+            "@type": "TouristDestination",
+            "name": "Nilgiris, Tamil Nadu"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.browntreestays.com/#website",
+          "url": "https://www.browntreestays.com/",
+          "name": "Brown Tree",
+          "description": "Luxury resorts, homestays, heritage stays and service apartments in the Nilgiris — Ooty, Coonoor, Kothakiri, Kodaikanal.",
+          "publisher": { "@id": "https://www.browntreestays.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.browntreestays.com/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
