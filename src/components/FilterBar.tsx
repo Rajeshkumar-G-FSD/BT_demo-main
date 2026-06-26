@@ -60,9 +60,16 @@ export default function FilterBar({ filterState, setFilterState, isDarkMode }: F
     const monthIndex = isJun ? 5 : 6;
 
     const days = Array.from({ length: numDays }, (_, i) => i + 1);
-    
+
     const checkInDate = parseDateString(filterState.checkIn);
     const checkOutDate = parseDateString(filterState.checkOut);
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Determine the month of today to prevent navigating before it
+    const todayMonthIndex = today.getMonth(); // 5 = June, 6 = July
+    const canGoPrev = monthIndex > todayMonthIndex;
 
     return (
       <div className="p-3 w-64 select-none">
@@ -71,9 +78,10 @@ export default function FilterBar({ filterState, setFilterState, isDarkMode }: F
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setCalendarMonth(isJun ? 'Jul' : 'Jun');
+              if (canGoPrev) setCalendarMonth('Jun');
             }}
-            className="p-1 rounded-lg hover:bg-neutral-500/10 text-neutral-500 hover:text-neutral-800 dark:hover:text-white transition-colors cursor-pointer"
+            disabled={!canGoPrev}
+            className={`p-1 rounded-lg transition-colors ${canGoPrev ? 'hover:bg-neutral-500/10 text-neutral-500 hover:text-neutral-800 dark:hover:text-white cursor-pointer' : 'text-neutral-300 dark:text-neutral-700 cursor-not-allowed'}`}
           >
             <ChevronDown className="w-4 h-4 rotate-90 stroke-[2.5]" />
           </button>
@@ -109,17 +117,19 @@ export default function FilterBar({ filterState, setFilterState, isDarkMode }: F
           {days.map((day) => {
             const currentDate = new Date(2026, monthIndex, day);
             const formatted = `${isJun ? 'Jun' : 'Jul'} ${String(day).padStart(2, '0')}`;
-            
+
             const isCheckIn = filterState.checkIn === formatted;
             const isCheckOut = filterState.checkOut === formatted;
-            
+
             let isInRange = false;
             if (checkInDate && checkOutDate) {
               isInRange = currentDate > checkInDate && currentDate < checkOutDate;
             }
 
-            // Disable check-out dates on or before check-in date
-            const isDisabled = type === 'checkOut' && checkInDate && currentDate <= checkInDate;
+            const isPast = currentDate < today;
+            const isDisabled =
+              isPast ||
+              (type === 'checkOut' && checkInDate && currentDate <= checkInDate);
 
             return (
               <button

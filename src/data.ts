@@ -1,4 +1,8 @@
 import { Property } from './types';
+import imgOotyHotel from './assets/images/browntree_ooty_hotel.png';
+import imgOotyHotels from './assets/images/browntree_ooty_hotels.png';
+import imgKothagiri from './assets/images/browntree_kothagiri.png';
+import imgKodaikanal from './assets/images/browntree_kodaikanal.png';
 
 export const PROPERTIES: Property[] = [
   {
@@ -13,12 +17,12 @@ export const PROPERTIES: Property[] = [
     yard: 126,
     bedrooms: 3,
     baths: 2,
-    mainImage: '/src/assets/images/browntree_ooty_hotel.png',
+    mainImage: imgOotyHotel,
     gallery: [
-      { name: 'Browntree Ooty Suite', url: '/src/assets/images/browntree_ooty_hotel.png' },
-      { name: 'Browntree Ooty Grounds', url: '/src/assets/images/browntree_ooty_hotels.png' },
-      { name: 'Browntree Kothagiri Crest', url: '/src/assets/images/browntree_kothagiri.png' },
-      { name: 'Browntree Kodaikanal Retreat', url: '/src/assets/images/browntree_kodaikanal.png' }
+      { name: 'Browntree Ooty Suite', url: imgOotyHotel },
+      { name: 'Browntree Ooty Grounds', url: imgOotyHotels },
+      { name: 'Browntree Kothagiri Crest', url: imgKothagiri },
+      { name: 'Browntree Kodaikanal Retreat', url: imgKodaikanal }
     ],
     description: 'This futuristic villa seamlessly blends into the desert environment, offering a modern, flowing space with panoramic desert views. Its innovative design makes it a perfect luxury getaway.',
     rating: 4.9
