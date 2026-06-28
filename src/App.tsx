@@ -23,6 +23,7 @@ import { FilterState, Property } from './types';
 import Sidebar from './components/Sidebar';
 import FilterBar from './components/FilterBar';
 import AuraChat from './components/AuraChat';
+import CircularText from './components/CircularText';
 
 export default function App() {
   // State variables
@@ -71,18 +72,16 @@ export default function App() {
     }
   }, [filterState]);
 
-  // Automatic slideshow effect for Browntree Ooty Resort (selectedProperty.id === 'lunar-oasis')
+  // Automatic slideshow — 5 seconds per image, runs for all properties
   useEffect(() => {
-    if (selectedProperty.id === 'lunar-oasis') {
-      const interval = setInterval(() => {
-        setActiveRoomIndex((prevIndex) => {
-          const nextIndex = (prevIndex + 1) % selectedProperty.gallery.length;
-          setActiveBgImage(selectedProperty.gallery[nextIndex].url);
-          return nextIndex;
-        });
-      }, 3000);
-      return () => clearInterval(interval);
-    }
+    const interval = setInterval(() => {
+      setActiveRoomIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % selectedProperty.gallery.length;
+        setActiveBgImage(selectedProperty.gallery[nextIndex].url);
+        return nextIndex;
+      });
+    }, 5000);
+    return () => clearInterval(interval);
   }, [selectedProperty.id, selectedProperty.gallery]);
 
   // Open Chat, AboutUs, or Careers depending on selected tab
@@ -205,13 +204,22 @@ export default function App() {
             
             {/* TOP BAR / FILTER BAR (Flush with the top of inner viewport, responsive padding) */}
             <div className="w-full z-20">
-              <FilterBar 
-                filterState={filterState} 
-                setFilterState={setFilterState} 
-                isDarkMode={isDarkMode} 
+              <FilterBar
+                filterState={filterState}
+                setFilterState={setFilterState}
+                isDarkMode={isDarkMode}
               />
             </div>
 
+            {/* CIRCULAR TEXT SPINNER — fits inside logo-row height on mobile, full size on desktop */}
+            <div className="absolute top-3 right-3 md:top-16 md:right-4 z-40 pointer-events-none">
+              <CircularText
+                text="OOTY * KOTHAGIRI * KODAIKANAL * "
+                onHover="speedUp"
+                spinDuration={18}
+                className="w-[56px] h-[56px] text-[4.5px] md:w-[140px] md:h-[140px] md:text-[10px] text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
+              />
+            </div>
 
             {/* EXACT HIGH-FIDELITY HERO SECTION */}
             <div className="flex-1 w-full relative z-10 flex flex-col justify-center items-center pt-4 pb-2 text-white">

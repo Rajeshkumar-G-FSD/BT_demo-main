@@ -19,10 +19,10 @@ export const PROPERTIES: Property[] = [
     baths: 2,
     mainImage: imgOotyHotel,
     gallery: [
-      { name: 'Browntree Ooty Suite', url: imgOotyHotel },
-      { name: 'Browntree Ooty Grounds', url: imgOotyHotels },
-      { name: 'Browntree Kothagiri Crest', url: imgKothagiri },
-      { name: 'Browntree Kodaikanal Retreat', url: imgKodaikanal }
+      { name: 'Browntree Ooty Suite', url: imgOotyHotel, label: 'Ooty' },
+      { name: 'Browntree Kodaikanal Retreat', url: imgKodaikanal, label: 'Kodaikanal' },
+      { name: 'Browntree Ooty Grounds', url: imgOotyHotels, label: 'Ooty' },
+      { name: 'Browntree Kothagiri Crest', url: imgKothagiri, label: 'Kothagiri' }
     ],
     description: 'This futuristic villa seamlessly blends into the desert environment, offering a modern, flowing space with panoramic desert views. Its innovative design makes it a perfect luxury getaway.',
     rating: 4.9
@@ -41,9 +41,9 @@ export const PROPERTIES: Property[] = [
     baths: 2,
     mainImage: imgOotyHotels,
     gallery: [
-      { name: 'Garden View', url: imgOotyHotels },
-      { name: 'Ooty Resort', url: imgOotyHotel },
-      { name: 'Kothagiri Wing', url: imgKothagiri }
+      { name: 'Garden View', url: imgOotyHotels, label: 'OOTY' },
+      { name: 'Ooty Resort', url: imgOotyHotel, label: 'OOTY' },
+      { name: 'Kothagiri Wing', url: imgKothagiri, label: 'KOTHAGIRI' }
     ],
     description: 'A charming homestay nestled amidst Coonoor\'s rolling tea gardens. Enjoy the cool misty mornings, colonial-era architecture and warm hospitality of the Nilgiris.',
     rating: 4.85
@@ -62,9 +62,9 @@ export const PROPERTIES: Property[] = [
     baths: 4,
     mainImage: imgKothagiri,
     gallery: [
-      { name: 'Heritage Bungalow', url: imgKothagiri },
-      { name: 'Kodaikanal View', url: imgKodaikanal },
-      { name: 'Ooty Resort', url: imgOotyHotel }
+      { name: 'Heritage Bungalow', url: imgKothagiri, label: 'KOTHAGIRI' },
+      { name: 'Kodaikanal View', url: imgKodaikanal, label: 'KODAIKANAL' },
+      { name: 'Ooty Resort', url: imgOotyHotel, label: 'OOTY' }
     ],
     description: 'A beautifully restored heritage bungalow in the serene village of Kothakiri. Experience colonial charm, lush shola forests and breathtaking Nilgiri panoramas.',
     rating: 4.98
@@ -83,9 +83,9 @@ export const PROPERTIES: Property[] = [
     baths: 3,
     mainImage: imgKodaikanal,
     gallery: [
-      { name: 'Kodaikanal Estate', url: imgKodaikanal },
-      { name: 'Kothagiri Stay', url: imgKothagiri },
-      { name: 'Ooty Grounds', url: imgOotyHotels }
+      { name: 'Kodaikanal Estate', url: imgKodaikanal, label: 'KODAIKANAL' },
+      { name: 'Kothagiri Stay', url: imgKothagiri, label: 'KOTHAGIRI' },
+      { name: 'Ooty Grounds', url: imgOotyHotels, label: 'OOTY' }
     ],
     description: 'Perched above the silver cascade valleys of Kodaikanal, this fully-serviced apartment blends modern comfort with the timeless beauty of the Princess of Hill Stations.',
     rating: 4.78

@@ -1,6 +1,7 @@
 export interface PropertyGalleryItem {
   name: string;
   url: string;
+  label: string;
 }
 
 export interface Property {
